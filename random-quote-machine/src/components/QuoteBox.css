@@ -1,0 +1,8 @@
+.quote-box {
+    background: #F4F8F3;
+    padding: 20px;
+    height: calc(100vh - 80px);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
