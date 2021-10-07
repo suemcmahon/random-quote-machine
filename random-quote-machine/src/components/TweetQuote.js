@@ -2,9 +2,7 @@ import './TweetQuote.css';
 
 const TweetQuote = ({tweetQuote}) => {
     return (
-        <button id="tweet-quote" className="button tweet-quote" onClick={tweetQuote}>
-            Tweet Quote
-        </button>
+        <a id="tweet-quote" className="button tweet-quote" target="_blank" href={`https://twitter.com/intent/tweet?text=${tweetQuote}`} rel="noopener noreferrer">Tweet Quote</a>
     );
 }
 export default TweetQuote;

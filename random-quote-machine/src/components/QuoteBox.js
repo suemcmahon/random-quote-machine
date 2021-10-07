@@ -22,6 +22,8 @@ const QuoteBox = () => {
         setAuthorItem(randomQuote.author);
     }
 
+    
+
     // State
     const [items, setItems] = useState([]);
     const [QuoteItem, setQuoteItem] = useState(null);
@@ -60,9 +62,7 @@ const QuoteBox = () => {
                 <Author author={AuthorItem} />
             </main>
             <footer className="footer">
-                <TweetQuote tweetQuote={() => {
-                    alert('Tweet Quote');
-                }} />
+                <TweetQuote tweetQuote={`${QuoteItem} - ${AuthorItem}`} />
                 <NewQuoteButton newQuote={() => generateRandomQuote(items)} />
             </footer>
         </div>
