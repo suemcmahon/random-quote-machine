@@ -1,28 +1,12 @@
 import { useEffect, useState } from 'react';
 import './QuoteBox.css';
+import generateRandomQuote from '../utils/generateRandomQuote';
 import Quote from './Quote';
 import Author from './Author';
 import NewQuoteButton from './NewQuoteButton';
 import TweetQuote from './TweetQuote';
 
 const QuoteBox = () => {
-
-    // Generate random quote
-
-    const generateRandomQuote = data => {
-        if (data === null) {
-            return;
-        }
-
-        const randomQuote = data.quotes[
-            Math.floor(Math.random() * data.quotes.length)
-        ];
-
-        setQuoteItem(randomQuote.quote);
-        setAuthorItem(randomQuote.author);
-    }
-
-    
 
     // State
     const [items, setItems] = useState([]);
@@ -38,7 +22,7 @@ const QuoteBox = () => {
                 (result) => {
                     setIsLoaded(true);
                     setItems(result);
-                    generateRandomQuote(result);
+                    generateRandomQuote(result, setQuoteItem, setAuthorItem);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -63,7 +47,7 @@ const QuoteBox = () => {
             </main>
             <footer className="footer">
                 <TweetQuote tweetQuote={`${QuoteItem} - ${AuthorItem}`} />
-                <NewQuoteButton newQuote={() => generateRandomQuote(items)} />
+                <NewQuoteButton newQuote={() => generateRandomQuote(items, setQuoteItem, setAuthorItem)} />
             </footer>
         </div>
     );
