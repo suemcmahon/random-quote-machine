@@ -3,3 +3,12 @@
     position: absolute;
     bottom: 40px;
 }
+
+.tweet-quote-img {
+    opacity: 0.8;
+}
+
+.tweet-quote-img:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}

@@ -17,15 +17,20 @@ code {
     padding: 1rem 2rem;
     margin: 0;
     text-decoration: none;
+    opacity: 0.8;
     background: #738C8D;
     color: #F4F8F2;
     font-family: 'Crimson Text', serif; 
     font-size: 18px;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out, 
+    transition: opacity 250ms ease-in-out, 
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 5px;
+}
+
+.button:hover {
+  opacity: 1;
 }
