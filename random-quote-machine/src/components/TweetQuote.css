@@ -1,5 +1,11 @@
-.tweet-quote {
+.social {
+    display: flex;
+    align-items: center;
     left: 40px;
     position: absolute;
     bottom: 40px;
+}
+
+.tweet-quote {
+    margin-left: 10px;
 }
