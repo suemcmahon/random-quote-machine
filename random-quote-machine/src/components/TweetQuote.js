@@ -1,5 +1,6 @@
 import './TweetQuote.css';
 import twitterLogo from '../images/twitter-share-icon.svg';
+import PropTypes from 'prop-types';
 
 const TweetQuote = ({tweetQuote}) => {
     return (
@@ -9,4 +10,8 @@ const TweetQuote = ({tweetQuote}) => {
         
     );
 }
+
+TweetQuote.propTypes = {
+    tweetQuote: PropTypes.string
+};
 export default TweetQuote;

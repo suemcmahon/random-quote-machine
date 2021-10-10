@@ -1,4 +1,5 @@
 import './NewQuoteButton.css';
+import PropTypes from 'prop-types';
 
 const NewQuoteButton = ({newQuote}) => {
     return (
@@ -6,5 +7,9 @@ const NewQuoteButton = ({newQuote}) => {
             New Quote
         </button>
     );
-}
+};
+
+NewQuoteButton.propTypes = {
+    newQuote: PropTypes.func
+};
 export default NewQuoteButton;
